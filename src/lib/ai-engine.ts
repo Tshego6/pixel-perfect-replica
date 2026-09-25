@@ -358,11 +358,11 @@ export function generateChatReply(prompt: string, history: string[]): string {
       "2. **Consequence-driven** — what breaks, or who is blocked, if this slips another day?",
       "3. **Everything else** — park it in a named list so it stops competing for attention.",
       "",
-      points.length
+      points.length > 1
         ? `From what you listed, I'd start with: ${points[0]}. Give it one protected block before email.`
         : "Name the three items out loud — the order usually becomes obvious once they're separated.",
       "",
-      "Then pick exactly one thing to *not* do today and say so to whoever is waiting.",
+      "Then pick exactly one thing you will not do today, and tell whoever is waiting.",
     ].join("\n");
   } else if (/update|status|progress|report/.test(lower)) {
     body = [
